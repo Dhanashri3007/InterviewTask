@@ -32,15 +32,14 @@ public class BookController {
 		return new ResponseEntity<Books>(bookServiceI.getBookByISBN(isbn), HttpStatus.OK);
 
 	}
+
 	@GetMapping("findById/{bookId}")
-	public ResponseEntity<Books> getBook(@PathVariable int bookId)
-	{
-		return new ResponseEntity<Books>(bookServiceI.getBookByBookId(bookId), HttpStatus.OK);	
+	public ResponseEntity<Books> getBook(@PathVariable int bookId) {
+		return new ResponseEntity<Books>(bookServiceI.getBookByBookId(bookId), HttpStatus.OK);
 	}
-    
+
 	@PutMapping("byBook/{bookId}")
-	public ResponseEntity<Books> byBook(@RequestBody Books b,@PathVariable int bookId)
-	{
-		return new ResponseEntity<Books>(bookServiceI.byBook(b,bookId), HttpStatus.OK);	
+	public ResponseEntity<Books> byBook(@RequestBody Books b, @PathVariable int bookId) {
+		return new ResponseEntity<Books>(bookServiceI.byBook(b, bookId), HttpStatus.OK);
 	}
 }

@@ -11,5 +11,5 @@ public interface BookServiceI {
 
 	public Books getBookByBookId(int bookId);
 
-	public Books byBook(Books b,int bookId );
+	public Books byBook(Books b, int bookId);
 }

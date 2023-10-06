@@ -10,6 +10,4 @@ public interface BookRepositry extends JpaRepository<Books, Integer> {
 
 	Books findByISBN(int isbn);
 
-
-
 }

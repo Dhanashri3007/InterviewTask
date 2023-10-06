@@ -16,7 +16,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Books {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int bookId;
@@ -25,7 +25,5 @@ public class Books {
 	int ISBN;
 	double price;
 	int quantity;
-	
-	
 
 }

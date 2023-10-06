@@ -1,6 +1,5 @@
 package com.online.bookstore.serviceIMPL;
 
-import java.awt.print.Book;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class BookServiceIMPL implements BookServiceI {
 	@Override
 	public Books getBookByISBN(int isbn) {
 		return bookrepositry.findByISBN(isbn);
-		
+
 	}
 
 	@Override
@@ -33,11 +32,11 @@ public class BookServiceIMPL implements BookServiceI {
 	}
 
 	@Override
-	public Books byBook(Books b,int bookId) {
-		
-      Books books = bookrepositry.findById(bookId).get();
-      books.setQuantity(books.getQuantity()-1);
-              System.out.println(books.getQuantity());
+	public Books byBook(Books b, int bookId) {
+
+		Books books = bookrepositry.findById(bookId).get();
+		books.setQuantity(books.getQuantity() - 1);
+		System.out.println(books.getQuantity());
 		return bookrepositry.save(books);
 
 	}
